@@ -52,7 +52,7 @@ def lstm_model(data, ticker):
     model.compile(optimizer='adam', loss='mean_squared_error')
     model.fit(x_train, y_train, epochs=25, batch_size=32)
 
-    pickle.dump(model, open(f'{ticker}', 'wb'))
+    pickle.dump(model, open(f'Pickle_files/{ticker}', 'wb'))
 
     return model
 

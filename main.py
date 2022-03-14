@@ -55,7 +55,7 @@ def main():
             st.write(data.tail())
 
             try:
-                pickle_model = pickle.load(open(f'{selected_stock}', 'rb'))
+                pickle_model = pickle.load(open(f'Pickle_files/{selected_stock}', 'rb'))
                 predictor.test_model(pickle_model, selected_stock)
 
             except FileNotFoundError:
